@@ -23,31 +23,31 @@ function newNonPlayableCharacter(x, y) {
 
     setInterval(moveCharacter, 1)
 
-    async function walkEast(time) {
+    async function walkEast(oras) {
         direction = 'east'
         element.src = `./assets/red-character/east.gif`
-        await delay(time)
+        await tulog(oras)
         stop()
     }
 
-    async function walkNorth(time) {
+    async function walkNorth(oras) {
         direction = 'north'
         element.src = `./assets/red-character/north.gif`
-        await delay(time)
+        await tulog(oras)
         stop()
     }
 
-    async function walkWest(time) {
+    async function walkWest(oras) {
         direction = 'west'
         element.src = `./assets/red-character/west.gif`
-        await delay(time)
+        await tulog(oras)
         stop()
     }
 
-    async function walkSouth(time) {
+    async function walkSouth(oras) {
         direction = 'south'
         element.src = `./assets/red-character/south.gif`
-        await delay(time)
+        await tulog(oras)
         stop()
     }
 
@@ -56,9 +56,9 @@ function newNonPlayableCharacter(x, y) {
         element.src = `./assets/red-character/static.gif`
     }
 
-    function delay(time){
+    function tulog(oras){
         return new Promise (resolve => {
-            setTimeout(resolve, time)
+            setTimeout(resolve, oras)
         })
     }
 
@@ -71,3 +71,5 @@ function newNonPlayableCharacter(x, y) {
         stop: stop
     }
 }
+
+//played with naming convention of some callbacks and functions just to learn from it. 
